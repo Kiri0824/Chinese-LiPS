@@ -53,7 +53,11 @@
         header {
             text-align: center;
             color: #2c3e50;
-            padding: 120px 20px 40px;
+            padding: 44px 0px 20px;
+        }.header-image {
+            width: 100vw; /* 图片宽度填满整个屏幕 */
+            height: 250px; /* 限制高度 */
+            display: block;
         }
 
         header h1 {
@@ -77,7 +81,7 @@
 
         /* Section Styles */
         section {
-            padding: 60px 20px; /* 增加卡片内的空间 */
+            padding: 20px 20px; /* 增加卡片内的空间 */
             max-width: 80%; /* 让卡片宽度占据更多屏幕 */
             margin: 20px auto;
             background: #fff;
@@ -187,6 +191,7 @@
 </nav>
 
 <header>
+    <img src="example.png" alt="Chinese-LiPS Dataset" class="header-image">
     <h1>Chinese-LiPS Dataset</h1>
     <h2>A Chinese audio-visual speech recognition dataset with Lip-reading and Presentation Slides</h2>
 </header>
@@ -249,8 +254,8 @@
             <a href="https://onedrive.live.com/?id=721006F535F6400C%2134366&cid=721006F535F6400C" target="_blank">Download from OneDrive</a>
         </li>
         <li>
-            <a href="https://pan.baidu.com/s/1NvgJqPM3kC5TIZC18aN82g?pwd=83y4" target="_blank">从百度网盘下载</a>  
-            (提取码: 83y4)
+            <a href="https://pan.baidu.com/s/11nvn79-3Inf3QDyJomlLAA?pwd=vg2a" target="_blank">从百度网盘下载</a>  
+            (提取码: vg2a)
         </li>
     </ul>
     <h3>Dataset Organization</h3>
@@ -260,7 +265,7 @@
         <li><strong>pptdataset.zip</strong>: This file contains data processed using the <a href="https://github.com/roudimit/whisper-flamingo/tree/main/preparation" target="_blank">Whisper-Flamingo</a> library. It includes the full dataset with 16 kHz audio, 96×96 lip-reading videos with 25 fps, and the corresponding processed annotations.</li>
         <li><strong>train.zip, test.zip, val.zip</strong>: These files contain the training, testing, and validation sets. Each zip file has the following structure:
 <pre>
-train.zip
+train.zip/test.zip/val.zip
 ├── ID1_age_gender_topic/
 │   ├── WAV/
 │   │   ├── ID1_age_gender_topic_001.json         # Audio segment annotation file
