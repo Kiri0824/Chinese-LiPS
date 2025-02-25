@@ -254,7 +254,7 @@
             <a href="https://onedrive.live.com/?id=721006F535F6400C%2134366&cid=721006F535F6400C" target="_blank">Download from OneDrive</a>
         </li>
         <li>
-            <a href="https://pan.baidu.com/s/11nvn79-3Inf3QDyJomlLAA?pwd=vg2a" target="_blank">从百度网盘下载</a>  
+            <a href="https://pan.baidu.com/s/11nvn79-3Inf3QDyJomlLAA?pwd=vg2a" target="_blank">Download from Baidu Netdisk</a>  
             (提取码: vg2a)
         </li>
     </ul>
@@ -282,7 +282,26 @@ train.zip/test.zip/val.zip
 │   │   ├── ID2_age_gender_topic_001_PPT.mp4
 │   ├── FACE/
 │   │   ├── ID2_age_gender_topic_001_FACE.mp4
+├── ...
 </pre>
+        </li>
+        <li><strong>asr.zip</strong>: Contains the complete datasets from train.zip, test.zip, and val.zip, organized by TOPIC. Zip file has the following structure:
+<pre>
+asr.zip
+├── topic1/
+│   ├── ID1_age_gender_topic/
+│   │   ├── WAV/
+│   │   │   ├── ID1_age_gender_topic_001.json         <!-- Audio segment annotation file -->
+│   │   │   ├── ID1_age_gender_topic_001.wav          <!-- Audio file (48 kHz) -->
+│   │   ├── PPT/
+│   │   │   ├── ID1_age_gender_topic_001_PPT.mp4      <!-- Slide video file (1080p 30fps) -->
+│   │   ├── FACE/
+│   │   │   ├── ID1_age_gender_topic_001_FACE.mp4     <!-- Lip-reading video file (720p 30fps) -->
+│   ├── ID2_age_gender_topic/
+│   │   ├── ...
+├── topic2/
+│   ├── ...
+</pre>        
         </li>
         <li><strong>meta_all.csv, meta_train.csv, meta_valid.csv, meta_test.csv</strong>: These metadata files contain the fields ID, TOPIC, WAV, PPT, FACE, and TEXT.</li>
         <p>The TOPIC field is abbreviated in Chinese as follows: DZJJ = E-sports & Gaming, JKYS = Health & Wellness, KJ = Science & Technology, LY = Travel & Exploration, QC = Automobile & Industry, RWLS = Culture & History, TY = Sports & Competitions, YS = Movies & TV Series, ZX = Others.</p>
