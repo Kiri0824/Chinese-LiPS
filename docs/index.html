@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese-LiPS Dataset</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            color: #2c3e50;
+            padding: 120px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #08bd6b;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        header h2 {
+          font-size: 1.5rem; /* 调整为适应屏幕的较小字体大小 */
+          margin-bottom: 20px;
+          color: #34495e;
+          line-height: 1.4; /* 增加行高让标题更清晰 */
+          word-wrap: break-word; /* 允许长文本换行 */
+          hyphens: auto; /* 支持自动换行 */
+          max-width: 90%; /* 确保标题不会超出屏幕 */
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+        /* Section Styles */
+        section {
+            padding: 60px 20px; /* 增加卡片内的空间 */
+            max-width: 80%; /* 让卡片宽度占据更多屏幕 */
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #1abc9c;
+            margin-top: 0;
+        }
+
+        section ul {
+            padding-left: 20px;
+        }
+
+        section ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Citation Style */
+        pre {
+            background: #f8f9fa;
+            border-left: 5px solid #1abc9c;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 30px 15px; /* 在小屏设备上减少内边距 */
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 1rem;
+        text-align: left;
+        background: #fff;
+    }
+
+    table thead {
+        background: #1abc9c;
+        color: white;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    table tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+
+    table tr:hover {
+        background: #f1f1f1;
+    }
+
+    table th {
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#citation">Citation</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Chinese-LiPS Dataset</h1>
+    <h2>A Chinese audio-visual speech recognition dataset with Lip-reading and Presentation Slides</h2>
+</header>
+
+<section id="overview">
+  <h2>Dataset Overview</h2>
+  <p>The Chinese-LiPS dataset is a multimodal audio-visual speech recognition (AVSR) dataset. The dataset includes:</p>
+  <ul>
+      <li>Approximately 100 hours of multimodal data, including speech, video, and manual transcriptions.</li>
+      <li>36,208 video clips featuring 207 professional speakers, covering topics such as instruction, lectures, and educational presentations.</li>
+      <li>Audio: Stereo WAV format with a 48 kHz sampling rate.</li>
+      <li>Video: 1080p resolution for slides and 720p resolution for lip-reading, both at 30 fps.</li>
+      <li>Annotations: JSON format with transcriptions.</li>
+  </ul>
+</section>
+
+<section id="download">
+    <h2>Download</h2>
+    <h3>Dataset Splits</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Split</th>
+                <th>Duration (hours)</th>
+                <th>Segment</th>
+                <th>Speaker</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Train</td>
+                <td>85.37</td>
+                <td>30,341</td>
+                <td>175</td>
+            </tr>
+            <tr>
+                <td>Validation</td>
+                <td>5.35</td>
+                <td>1,959</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Test</td>
+                <td>10.12</td>
+                <td>3,908</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>All</td>
+                <td>100.84</td>
+                <td>36,208</td>
+                <td>207</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Dataset Access</h3>
+    <p>You can access the dataset using the links below:</p>
+    <ul>
+        <li>
+            <a href="https://onedrive.live.com/?id=721006F535F6400C%2134366&cid=721006F535F6400C" target="_blank">Download from OneDrive</a>
+        </li>
+        <li>
+            <a href="https://pan.baidu.com/s/1NvgJqPM3kC5TIZC18aN82g?pwd=83y4" target="_blank">从百度网盘下载</a>  
+            (提取码: 83y4)
+        </li>
+    </ul>
+    <h3>Dataset Organization</h3>
+    <p>The dataset includes three main modalities: audio, slide video, and lip-reading video. The dataset is organized into several files:</p>
+    <ul>
+        <li><strong>image.zip</strong>: This file contains the first frame of each slide video segment, which is used for OCR and visual language model processing. The images are in JPG format.</li>
+        <li><strong>pptdataset.zip</strong>: This file contains data processed using the <a href="https://github.com/roudimit/whisper-flamingo/tree/main/preparation" target="_blank">Whisper-Flamingo</a> library. It includes the full dataset with 16 kHz audio, 96×96 lip-reading videos with 25 fps, and the corresponding processed annotations.</li>
+        <li><strong>train.zip, test.zip, val.zip</strong>: These files contain the training, testing, and validation sets. Each zip file has the following structure:
+<pre>
+train.zip
+├── ID1_age_gender_topic/
+│   ├── WAV/
+│   │   ├── ID1_age_gender_topic_001.json         # Audio segment annotation file
+│   │   ├── ID1_age_gender_topic_001.wav          # Audio file (48 kHz)
+│   ├── PPT/
+│   │   ├── ID1_age_gender_topic_001_PPT.mp4      # Slide video file (1080p 30fps)
+│   ├── FACE/
+│   │   ├── ID1_age_gender_topic_001_FACE.mp4       # Lip-reading video file (720p 30fps)
+├── ID2_age_gender_topic/
+│   ├── WAV/
+│   │   ├── ID2_age_gender_topic_001.json
+│   │   ├── ID2_age_gender_topic_001.wav
+│   ├── PPT/
+│   │   ├── ID2_age_gender_topic_001_PPT.mp4
+│   ├── FACE/
+│   │   ├── ID2_age_gender_topic_001_FACE.mp4
+</pre>
+        </li>
+        <li><strong>meta_all.csv, meta_train.csv, meta_valid.csv, meta_test.csv</strong>: These metadata files contain the fields ID, TOPIC, WAV, PPT, FACE, and TEXT.</li>
+        <p>The TOPIC field is abbreviated in Chinese as follows: DZJJ = E-sports & Gaming, JKYS = Health & Wellness, KJ = Science & Technology, LY = Travel & Exploration, QC = Automobile & Industry, RWLS = Culture & History, TY = Sports & Competitions, YS = Movies & TV Series, ZX = Others.</p>
+        <li><strong>meta_test.json</strong>: This file contains prompts of test dataset processed using PaddleOCR and InternVL2. It includes:</li>
+<pre>
+wav_path: Path to the audio file.
+ppt_path: Path to the first-frame image of the slide video.
+ocr_text: Text extracted by PaddleOCR.
+vl2_text: Text extracted by InternVL2.
+gt_text: Ground truth transcription of the audio.
+ocr_vl2_text: OCR text reprocessed by InternVL2 (not a concatenation of PaddleOCR and InternVL2 results).
+</pre>
+    </ul>
+</section>
+
+<section id="citation">
+    <h2>Citation</h2>
+    <p>If you use the Chinese-LiPS dataset in your research, please cite the following paper:</p>
+<pre>
+@inproceedings{chinese_lips,
+  title={Chinese-LiPS: A Multimodal Dataset for Mandarin Chinese AVSR},
+  author={Your Name and Collaborators},
+  booktitle={ICME 2025},
+  year={2025}
+}
+</pre>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions or suggestions, feel free to reach out via email at zhao1jing1hua@gmail.com.</p>
+</section>
+
+<footer>
+    <p>Nankai University Human Language Technology Lab | <a href="#overview">Back to top</a></p>
+</footer>
+
+</body>
+</html>
